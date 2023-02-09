@@ -4,7 +4,7 @@ import Delivery from "../img/delivery.png";
 
 const HomeContainer = () => {
 	return (
-		<div className="grid grid-cols-1 md:grid-cols-2 gap-2 w-full h-[calc(100%-88px)]">
+		<section className="grid grid-cols-1 md:grid-cols-2 gap-2 w-full">
 			<div className="py-2 flex-1 flex flex-col items-start justify-center gap-6">
 				<div
 					className="flex items-center gap-2 justify-center bg-orange-100
@@ -43,7 +43,7 @@ const HomeContainer = () => {
 				</button>
 			</div>
 			<div className="py-2 bg-blue-400 flex-1"></div>
-		</div>
+		</section>
 	);
 };
 
