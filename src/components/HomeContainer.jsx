@@ -50,7 +50,9 @@ const HomeContainer = () => {
 					alt="hero-bg"
 				/>
 
-				<div className="w-full h-full absolute top-0 left-0 flex items-center justify-center px-32 py-4"></div>
+				<div className="w-full h-full absolute top-0 left-0 flex items-center justify-center px-32 py-4">
+					<div className="w-190 p-2 bg-red-500"></div>
+				</div>
 			</div>
 		</section>
 	);
