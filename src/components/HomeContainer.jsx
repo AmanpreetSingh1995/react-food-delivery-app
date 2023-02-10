@@ -3,7 +3,7 @@ import React from "react";
 import Delivery from "../img/delivery.png";
 import HeroBg from "../img/heroBg.png";
 
-import heroData from "../utils/data";
+import { heroData } from "../utils/data";
 
 const HomeContainer = () => {
 	return (
