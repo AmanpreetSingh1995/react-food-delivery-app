@@ -60,7 +60,7 @@ const HomeContainer = () => {
 						</p>
 
 						<p className="text-sm font-semibold text-headingColor">
-							<span>$ </span>5.25
+							<span className="text-xs text-red-600">$ </span>5.25
 						</p>
 					</div>
 				</div>
