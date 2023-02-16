@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 
+import { MdFastfood } from "react-icons/md";
+
 const CreateContainer = () => {
 	const [title, setTitle] = useState("");
 	const [calories, setCalories] = useState("");
@@ -30,7 +32,17 @@ const CreateContainer = () => {
 					</motion.p>
 				)}
 
-				<div className="w-full py-2 border-b border-gray-300 flex items-center gap-2"></div>
+				<div className="w-full py-2 border-b border-gray-300 flex items-center gap-2">
+					<MdFastfood className="text-xl text-gray-700" />
+					<input
+						type="text"
+						required
+						value={title}
+						onChange={(e) => setTitle(e.target.value)}
+						placeholder="Give me a title..."
+						className="w-full h-full text-xl bg-transparent font-semibold"
+					/>
+				</div>
 			</div>
 		</div>
 	);
