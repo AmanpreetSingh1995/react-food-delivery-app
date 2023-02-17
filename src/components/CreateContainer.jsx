@@ -14,7 +14,7 @@ const CreateContainer = () => {
 	const [fields, setFields] = useState(false);
 	const [alertStatus, setAlertStatus] = useState("danger");
 	const [msg, setMsg] = useState(null);
-	const [isLoading, setIsLoading] = useState(false);
+	const [isLoading, setIsLoading] = useState(true);
 
 	return (
 		<div className="w-full min-h-screen flex items-center justify-center">
@@ -66,6 +66,10 @@ const CreateContainer = () => {
 								</option>
 							))}
 					</select>
+				</div>
+
+				<div className="group flex justify-center items-center flex-col border-2 border-dotted border-gray-300 w-full h-225 md:h-420 cursor-pointer rounded-lg">
+					{isLoading ? <Loader /> : <></>}
 				</div>
 			</div>
 		</div>
