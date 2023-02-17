@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { MdFastfood } from "react-icons/md";
 
 import { categories } from "../utils/data";
+import Loader from "./Loader";
 
 const CreateContainer = () => {
 	const [title, setTitle] = useState("");
