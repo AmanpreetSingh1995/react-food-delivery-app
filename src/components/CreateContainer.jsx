@@ -17,7 +17,7 @@ import {
 	ref,
 	uploadBytesResumable,
 } from "firebase/storage";
-import { getAllFoodItems, saveItem } from "../utils/firebaseFunction";
+import { getAllFoodItems, saveItem } from "../utils/firebaseFunctionss";
 import { actionTypes } from "../context/reducer";
 import { useStateValue } from "../context/StateProvider";
 
