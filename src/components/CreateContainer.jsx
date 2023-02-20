@@ -48,7 +48,7 @@ const CreateContainer = () => {
 			(error) => {
 				console.log(error);
 				setFields(true);
-				setMsg("Error while Uploading : Try Again!!");
+				setMsg("Error while uploading : Try AGain 🙇");
 				setAlertStatus("danger");
 				setTimeout(() => {
 					setFields(false);
@@ -60,7 +60,7 @@ const CreateContainer = () => {
 					setImageAsset(downloadURL);
 					setIsLoading(false);
 					setFields(true);
-					setMsg("Image uploaded successfully");
+					setMsg("Image uploaded successfully 😊");
 					setAlertStatus("success");
 					setTimeout(() => {
 						setFields(false);
@@ -69,6 +69,7 @@ const CreateContainer = () => {
 			}
 		);
 	};
+
 	const deleteImage = () => {
 		setIsLoading(true);
 		const deleteRef = ref(storage, imageAsset);
@@ -76,13 +77,14 @@ const CreateContainer = () => {
 			setImageAsset(null);
 			setIsLoading(false);
 			setFields(true);
-			setMsg("Image deleted successfully");
+			setMsg("Image deleted successfully 😊");
 			setAlertStatus("success");
 			setTimeout(() => {
 				setFields(false);
 			}, 4000);
 		});
 	};
+
 	const saveDetails = () => {
 		setIsLoading(true);
 		try {
@@ -104,23 +106,20 @@ const CreateContainer = () => {
 					qty: 1,
 					price: price,
 				};
-
 				saveItem(data);
-
-				setImageAsset(null);
 				setIsLoading(false);
 				setFields(true);
-				setMsg("Data uploaded successfully");
-				clearData();
+				setMsg("Data Uploaded successfully 😊");
 				setAlertStatus("success");
 				setTimeout(() => {
 					setFields(false);
 				}, 4000);
+				clearData();
 			}
 		} catch (error) {
 			console.log(error);
 			setFields(true);
-			setMsg("Error while Uploading : Try Again!!");
+			setMsg("Error while uploading : Try AGain 🙇");
 			setAlertStatus("danger");
 			setTimeout(() => {
 				setFields(false);
@@ -150,7 +149,7 @@ const CreateContainer = () => {
 
 	return (
 		<div className="w-full min-h-screen flex items-center justify-center">
-			<div className="w-[90%] md:w-[75%] border border-gray-300 rounded-lg p-4 flex flex-col items-center justify-center gap-4">
+			<div className="w-[90%] md:w-[50%] border border-gray-300 rounded-lg p-4 flex flex-col items-center justify-center gap-4">
 				{fields && (
 					<motion.p
 						initial={{ opacity: 0 }}
@@ -174,7 +173,7 @@ const CreateContainer = () => {
 						value={title}
 						onChange={(e) => setTitle(e.target.value)}
 						placeholder="Give me a title..."
-						className="w-full h-full text-xl bg-transparent outline-none border-none placeholder:text-gray-400 text-textColor"
+						className="w-full h-full text-lg bg-transparent outline-none border-none placeholder:text-gray-400 text-textColor"
 					/>
 				</div>
 
@@ -184,9 +183,8 @@ const CreateContainer = () => {
 						className="outline-none w-full text-base border-b-2 border-gray-200 p-2 rounded-md cursor-pointer"
 					>
 						<option value="other" className="bg-white">
-							Select Categories
+							Select Category
 						</option>
-
 						{categories &&
 							categories.map((item) => (
 								<option
@@ -200,7 +198,7 @@ const CreateContainer = () => {
 					</select>
 				</div>
 
-				<div className="group flex justify-center items-center flex-col border-2 border-dotted border-gray-300 w-full h-225 md:h-420 cursor-pointer rounded-lg">
+				<div className="group flex justify-center items-center flex-col border-2 border-dotted border-gray-300 w-full h-225 md:h-340 cursor-pointer rounded-lg">
 					{isLoading ? (
 						<Loader />
 					) : (
@@ -208,7 +206,7 @@ const CreateContainer = () => {
 							{!imageAsset ? (
 								<>
 									<label className="w-full h-full flex flex-col items-center justify-center cursor-pointer">
-										<div className="w-full h-full flex flex-col items-center justify-center cursor-pointer gap-2">
+										<div className="w-full h-full flex flex-col items-center justify-center gap-2">
 											<MdCloudUpload className="text-gray-500 text-3xl hover:text-gray-700" />
 											<p className="text-gray-500 hover:text-gray-700">
 												Click here to upload
@@ -233,7 +231,7 @@ const CreateContainer = () => {
 										/>
 										<button
 											type="button"
-											className="absolute bottom-3 right-3 p-3 rounded-full bg-red-500 text-xl cursor-pointer outline-none hover:shadow-md duration-100 transition-all ease-in-out"
+											className="absolute bottom-3 right-3 p-3 rounded-full bg-red-500 text-xl cursor-pointer outline-none hover:shadow-md  duration-500 transition-all ease-in-out"
 											onClick={deleteImage}
 										>
 											<MdDelete className="text-white" />
@@ -254,7 +252,7 @@ const CreateContainer = () => {
 							value={calories}
 							onChange={(e) => setCalories(e.target.value)}
 							placeholder="Calories"
-							className="w-full h-full text-xl bg-transparent outline-none border-none placeholder:text-gray-400 text-textColor"
+							className="w-full h-full text-lg bg-transparent outline-none border-none placeholder:text-gray-400 text-textColor"
 						/>
 					</div>
 
@@ -266,7 +264,7 @@ const CreateContainer = () => {
 							value={price}
 							onChange={(e) => setPrice(e.target.value)}
 							placeholder="Price"
-							className="w-full h-full text-xl bg-transparent outline-none border-none placeholder:text-gray-400 text-textColor"
+							className="w-full h-full text-lg bg-transparent outline-none border-none placeholder:text-gray-400 text-textColor"
 						/>
 					</div>
 				</div>
